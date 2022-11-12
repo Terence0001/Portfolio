@@ -1,5 +1,5 @@
 <?php
-$to = 'dia02@polenumerique.re';
+$to = 'terence.devequi19@protonmail.com';
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 $from = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -14,6 +14,6 @@ if (filter_var($from, FILTER_VALIDATE_EMAIL)) {
     die('OK');
     
 } else {
-    die('Invalid address');
+    die('Adresse mail Invalide !');
 }
 ?>
