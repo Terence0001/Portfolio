@@ -17,7 +17,7 @@
         // Note: the pose library adds "tmImage" object to your window (window.tmImage)
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
-
+        alert("Veuillez patienter quelques secondes, le programme s'éxécute")
         // Convenience function to setup a webcam
         webcam = new tmImage.Webcam(400, 400); // width, height
         await webcam.setup(); // request access to the webcam
