@@ -11,13 +11,14 @@
     async function init() {
         if (!clicked) {
             clicked=true
+            alert("Veuillez patienter quelques secondes, le programme s'éxécute")
         // load the model and metadata
         // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
         // or files from your local hard drive
         // Note: the pose library adds "tmImage" object to your window (window.tmImage)
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
-        alert("Veuillez patienter quelques secondes, le programme s'éxécute")
+        
         // Convenience function to setup a webcam
         webcam = new tmImage.Webcam(400, 400); // width, height
         await webcam.setup(); // request access to the webcam
